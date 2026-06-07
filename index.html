@@ -3,27 +3,27 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-<title>EngFit 단어 테스트 · Dreaming of My Future</title>
+<title>EngFit 단어 테스트 · Open the Doors to the World</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet">
 <style>
   :root{
-    --navy:#1f2a52;
-    --navy-d:#16203f;
-    --navy-l:#27336b;
-    --gold:#f0a830;
-    --gold-d:#d68f15;
-    --cream:#fdf9f0;
-    --card:#ffffff;
-    --ink:#1f2a52;
-    --sub:#7c879e;
-    --green:#16a673;
-    --green-bg:#e6f8f0;
-    --red:#e5484d;
-    --red-bg:#fdeced;
-    --line:#e9e4d8;
-    --shadow:0 14px 36px rgba(13,19,43,.38);
+    --brown:#4e3a2a;
+    --brown-d:#3e2d20;
+    --brown-l:#6a523d;
+    --tan:#b08d5f;
+    --tan-d:#94713f;
+    --cream:#f7f1e6;
+    --card:#fffdf8;
+    --ink:#4e3a2a;
+    --sub:#9a8a76;
+    --green:#4f7d4e;
+    --green-bg:#ecf4ea;
+    --red:#c0564b;
+    --red-bg:#faeceb;
+    --line:#e3d8c8;
+    --shadow:0 14px 36px rgba(74,56,38,.30);
   }
   *{box-sizing:border-box;-webkit-tap-highlight-color:transparent;}
   html,body{margin:0;height:100%;}
@@ -33,25 +33,37 @@
     display:flex;align-items:center;justify-content:center;
     min-height:100dvh;padding:16px;
     background:
-      radial-gradient(circle at 50% -10%, rgba(240,168,48,.30) 0%, rgba(240,168,48,0) 42%),
-      radial-gradient(circle at 12% 88%, rgba(240,168,48,.12) 0%, rgba(240,168,48,0) 30%),
-      linear-gradient(165deg,#27336b 0%, #1f2a52 45%, #16203f 100%);
+      radial-gradient(ellipse at 30% 20%, rgba(217,199,184,.7) 0%, transparent 55%),
+      radial-gradient(ellipse at 75% 70%, rgba(201,178,158,.55) 0%, transparent 55%),
+      radial-gradient(ellipse at 50% 95%, rgba(190,165,142,.4) 0%, transparent 50%),
+      linear-gradient(160deg, #ece3d8 0%, #e3d6c7 45%, #d9c7b6 100%);
     position:relative;overflow-x:hidden;
   }
-  /* retro badge motifs on background */
-  body::before, body::after{
-    content:'';position:fixed;border-radius:50%;pointer-events:none;
-    border:2px dashed rgba(240,168,48,.28);
+  /* 점박이 텍스처 */
+  body::before{
+    content:'';position:fixed;inset:0;pointer-events:none;
+    background-image:
+      radial-gradient(circle 1.5px at 12% 18%, #7a6450 99%, transparent),
+      radial-gradient(circle 1px at 78% 8%, #7a6450 99%, transparent),
+      radial-gradient(circle 2px at 88% 34%, #8a7460 99%, transparent),
+      radial-gradient(circle 1px at 22% 56%, #7a6450 99%, transparent),
+      radial-gradient(circle 1.5px at 64% 82%, #8a7460 99%, transparent),
+      radial-gradient(circle 1px at 38% 92%, #7a6450 99%, transparent),
+      radial-gradient(circle 1.5px at 50% 40%, #7a6450 99%, transparent),
+      radial-gradient(circle 1px at 8% 80%, #8a7460 99%, transparent);
+    opacity:.5;
   }
-  body::before{width:340px;height:340px;top:-130px;right:-110px;}
-  body::after{width:260px;height:260px;bottom:-100px;left:-90px;}
+  .deco{position:fixed;pointer-events:none;z-index:0;}
+  .deco.leaf{font-size:64px;color:#4e3a2a;opacity:.85;}
+  .deco.flower{font-size:26px;color:#f3e6c4;text-shadow:0 0 8px rgba(243,230,196,.95);}
+  .deco.heart{font-size:18px;color:#3e2d20;opacity:.8;}
   .eng{font-family:'Patrick Hand',cursive;}
   .app{
     width:100%;max-width:460px;background:var(--card);
     border-radius:26px;box-shadow:var(--shadow);
     overflow:hidden;position:relative;min-height:620px;
     display:flex;flex-direction:column;z-index:1;
-    border:1px solid rgba(240,168,48,.35);
+    border:1px solid rgba(176,141,95,.45);
   }
   .logo{display:flex;align-items:center;}
   .logo svg{display:block;}
@@ -61,19 +73,19 @@
   /* START */
   #start{align-items:center;justify-content:center;text-align:center;gap:6px;
     background:
-      radial-gradient(circle at 50% 0%, rgba(240,168,48,.10) 0%, rgba(240,168,48,0) 55%),
+      radial-gradient(circle at 50% 0%, rgba(176,141,95,.12) 0%, rgba(176,141,95,0) 55%),
       var(--cream);
   }
   #start .badge{
     margin:6px 0 12px;width:190px;height:190px;border-radius:50%;
-    background:#fff;border:2.5px solid var(--navy);
-    box-shadow:0 0 0 7px var(--cream), 0 0 0 9px rgba(240,168,48,.85), 0 14px 26px rgba(31,42,82,.18);
+    background:#fffdf8;border:2.5px solid var(--brown);
+    box-shadow:0 0 0 7px var(--cream), 0 0 0 9px rgba(176,141,95,.85), 0 14px 26px rgba(78,58,42,.18);
     display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;
     position:relative;
   }
-  .badge .star{color:var(--gold);font-size:15px;letter-spacing:5px;}
-  #start h1{margin:10px 0 2px;font-size:1.5em;font-weight:900;color:var(--navy);}
-  #start .unit{font-family:'Patrick Hand',cursive;font-size:1.32em;color:var(--gold-d);}
+  .badge .star{color:#cdab77;font-size:15px;letter-spacing:5px;}
+  #start h1{margin:10px 0 2px;font-size:1.5em;font-weight:900;color:var(--brown);}
+  #start .unit{font-family:'Patrick Hand',cursive;font-size:1.3em;color:var(--tan-d);}
   #start .meta{margin-top:5px;font-size:.92em;color:var(--sub);}
   .btn{
     border:none;border-radius:16px;cursor:pointer;font-family:'Noto Sans KR',sans-serif;
@@ -81,28 +93,30 @@
   }
   .btn:active{transform:scale(.97);}
   .btn-primary{
-    background:var(--navy);color:#fff;font-size:1.08em;padding:16px 20px;width:100%;
-    box-shadow:0 8px 18px rgba(31,42,82,.35);
+    background:var(--brown);color:#fff;font-size:1.08em;padding:16px 20px;width:100%;
+    box-shadow:0 8px 18px rgba(78,58,42,.35);
   }
-  .btn-primary:active{background:var(--navy-d);}
+  .btn-primary:active{background:var(--brown-d);}
   #start .startwrap{width:100%;margin-top:20px;}
+  .kbdhint{margin-top:10px;font-size:.8em;color:var(--sub);}
+  .kbdhint b{color:var(--tan-d);}
 
   /* QUIZ */
-  #quiz{padding-top:18px;background:#fff;}
+  #quiz{padding-top:18px;background:#fffdf8;}
   .qtop{display:flex;align-items:center;justify-content:space-between;margin-bottom:14px;}
   .count{font-size:.92em;color:var(--sub);font-weight:700;}
   .bar{height:8px;background:var(--line);border-radius:99px;overflow:hidden;margin-bottom:24px;}
-  .bar > i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--gold),#f6c465);border-radius:99px;transition:width .3s;}
+  .bar > i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--tan),#d3b88c);border-radius:99px;transition:width .3s;}
   .prompt{
     flex:0 0 auto;min-height:120px;display:flex;flex-direction:column;
     align-items:center;justify-content:center;text-align:center;gap:8px;margin-bottom:22px;
   }
-  .qtag{font-size:.82em;font-weight:700;color:var(--gold-d);background:rgba(240,168,48,.14);padding:5px 12px;border-radius:99px;}
-  .qword-en{font-family:'Patrick Hand',cursive;font-size:2.6em;line-height:1.1;color:var(--navy);}
-  .qword-ko{font-family:'Noto Sans KR',sans-serif;font-size:1.65em;font-weight:700;line-height:1.3;color:var(--navy);}
+  .qtag{font-size:.82em;font-weight:700;color:var(--tan-d);background:rgba(176,141,95,.16);padding:5px 12px;border-radius:99px;}
+  .qword-en{font-family:'Patrick Hand',cursive;font-size:2.6em;line-height:1.1;color:var(--brown);}
+  .qword-ko{font-family:'Noto Sans KR',sans-serif;font-size:1.65em;font-weight:700;line-height:1.3;color:var(--brown);}
   .choices{display:flex;flex-direction:column;gap:11px;margin-top:auto;}
   .choice{
-    width:100%;text-align:center;background:#fff;border:2px solid var(--line);
+    width:100%;text-align:center;background:#fffdf8;border:2px solid var(--line);
     border-radius:16px;padding:15px 14px;cursor:pointer;color:var(--ink);
     transition:border-color .15s, background .15s, transform .08s;
   }
@@ -115,21 +129,21 @@
   .choice .num{
     display:inline-flex;align-items:center;justify-content:center;
     width:22px;height:22px;border-radius:7px;margin-right:9px;
-    background:rgba(31,42,82,.07);color:var(--sub);
+    background:rgba(78,58,42,.07);color:var(--sub);
     font-family:'Noto Sans KR',sans-serif;font-size:.72rem;font-weight:700;vertical-align:middle;
   }
-  .choice.correct .num{background:rgba(22,166,115,.15);color:var(--green);}
-  .choice.wrong .num{background:rgba(229,72,77,.15);color:var(--red);}
+  .choice.correct .num{background:rgba(79,125,78,.15);color:var(--green);}
+  .choice.wrong .num{background:rgba(192,86,75,.15);color:var(--red);}
 
   /* 주관식 */
   .typebox{display:flex;flex-direction:column;gap:11px;margin-top:auto;}
   .typebox input{
-    width:100%;text-align:center;background:#fff;border:2px solid var(--line);
+    width:100%;text-align:center;background:#fffdf8;border:2px solid var(--line);
     border-radius:16px;padding:14px;color:var(--ink);outline:none;
     font-family:'Patrick Hand',cursive;font-size:1.44em;
     transition:border-color .15s, background .15s;
   }
-  .typebox input:focus{border-color:var(--gold);}
+  .typebox input:focus{border-color:var(--tan);}
   .typebox input.correct{border-color:var(--green);background:var(--green-bg);color:var(--green);font-weight:700;}
   .typebox input.wrong{border-color:var(--red);background:var(--red-bg);color:var(--red);}
   .typeanswer{
@@ -137,43 +151,54 @@
   }
   .typeanswer .eng{font-size:1.35em;}
   .typehint{text-align:center;font-size:.8em;color:var(--sub);}
-  .kbdhint{margin-top:10px;font-size:.8em;color:var(--sub);}
-  .kbdhint b{color:var(--gold-d);}
 
   /* RESULT */
   #result{padding-top:20px;
     background:
-      radial-gradient(circle at 50% 0%, rgba(240,168,48,.10) 0%, rgba(240,168,48,0) 50%),
+      radial-gradient(circle at 50% 0%, rgba(176,141,95,.12) 0%, rgba(176,141,95,0) 50%),
       var(--cream);
   }
   #result .logo{justify-content:center;margin-bottom:8px;}
   .scorecard{text-align:center;margin:6px 0 18px;}
   .scorecard .emoji{font-size:46px;}
-  .scorecard .score{font-size:2.4em;font-weight:900;margin-top:4px;color:var(--navy);}
+  .scorecard .score{font-size:2.4em;font-weight:900;margin-top:4px;color:var(--brown);}
   .scorecard .score small{font-size:.42em;color:var(--sub);font-weight:700;}
-  .scorecard .pct{font-size:1em;color:var(--gold-d);font-weight:700;margin-top:2px;}
-  .reviewhead{font-size:.95em;font-weight:700;margin:6px 2px 10px;display:flex;justify-content:space-between;align-items:center;color:var(--navy);}
+  .scorecard .pct{font-size:1em;color:var(--tan-d);font-weight:700;margin-top:2px;}
+  .reviewhead{font-size:.95em;font-weight:700;margin:6px 2px 10px;display:flex;justify-content:space-between;align-items:center;color:var(--brown);}
   .reviewhead .ok{color:var(--green);font-size:.92em;}
   .review{display:flex;flex-direction:column;gap:9px;max-height:240px;overflow-y:auto;padding:2px;}
-  .ritem{border:1.5px solid var(--red-bg);background:#fff;border-radius:14px;padding:11px 13px;border-left:5px solid var(--red);}
+  .ritem{border:1.5px solid var(--red-bg);background:#fffdf8;border-radius:14px;padding:11px 13px;border-left:5px solid var(--red);}
   .ritem .q{font-size:.8em;color:var(--sub);font-weight:600;margin-bottom:3px;}
   .ritem .ans{display:flex;flex-wrap:wrap;gap:6px 10px;align-items:baseline;font-size:.95em;}
   .ritem .yours{color:var(--red);} .ritem .yours s{opacity:.8;}
   .ritem .right{color:var(--green);font-weight:700;}
-  .ritem b.eng{font-family:'Patrick Hand',cursive;font-size:1.2em;font-weight:400;color:var(--navy);}
+  .ritem b.eng{font-family:'Patrick Hand',cursive;font-size:1.2em;font-weight:400;color:var(--brown);}
   .allright{text-align:center;color:var(--green);font-weight:700;padding:18px;background:var(--green-bg);border-radius:14px;}
   .actions{margin-top:16px;display:flex;flex-direction:column;gap:10px;}
   .btn-kakao{background:#FEE500;color:#3a1d1d;font-size:1.04em;padding:15px;width:100%;display:flex;align-items:center;justify-content:center;gap:8px;}
-  .btn-ghost{background:#efe9db;color:var(--navy);font-size:1em;padding:14px;width:100%;}
+  .btn-ghost{background:#ece2d0;color:var(--brown);font-size:1em;padding:14px;width:100%;}
   .toast{
     position:absolute;left:50%;bottom:26px;transform:translateX(-50%) translateY(20px);
-    background:var(--navy);color:#fff;padding:11px 18px;border-radius:99px;font-size:.9em;font-weight:600;
+    background:var(--brown);color:#fff;padding:11px 18px;border-radius:99px;font-size:.9em;font-weight:600;
     opacity:0;pointer-events:none;transition:.25s;white-space:nowrap;
   }
   .toast.show{opacity:1;transform:translateX(-50%) translateY(0);}
 </style>
 </head>
 <body>
+<!-- 베이지 수채화 보태니컬 배경 장식 -->
+<span class="deco leaf" style="top:-14px;left:-10px;transform:rotate(120deg)">🌿</span>
+<span class="deco leaf" style="top:-12px;right:-8px;transform:rotate(-130deg) scaleX(-1)">🌿</span>
+<span class="deco leaf" style="bottom:-14px;right:-10px;transform:rotate(-40deg)">🌿</span>
+<span class="deco leaf" style="bottom:-12px;left:-8px;transform:rotate(40deg) scaleX(-1)">🌿</span>
+<span class="deco flower" style="top:9%;left:8%">✽</span>
+<span class="deco flower" style="top:42%;left:3%">✽</span>
+<span class="deco flower" style="top:60%;right:4%">✽</span>
+<span class="deco flower" style="bottom:8%;left:14%">✽</span>
+<span class="deco flower" style="top:14%;right:10%">✽</span>
+<span class="deco heart" style="top:26%;right:6%">♥</span>
+<span class="deco heart" style="bottom:28%;left:5%;transform:rotate(-15deg)">♥</span>
+
 <div class="app">
 
   <!-- START -->
@@ -194,8 +219,8 @@
       <span class="star">★ ★ ★</span>
     </div>
     <h1>단어 테스트</h1>
-    <div class="unit eng">4. Dreaming of My Future</div>
-    <div class="meta">천재(정사열) 중3 영어 · 전체 60문항 랜덤</div>
+    <div class="unit eng">4. Open the Doors to the World</div>
+    <div class="meta">천재(소영순) 중2 영어 · 전체 40문항 랜덤</div>
     <div class="meta">영어↔한글 혼합 + 주관식(영어 쓰기) 출제</div>
     <div class="kbdhint">💻 키보드 <b>1~4</b>로 보기 선택 · 주관식은 <b>Enter</b>로 제출</div>
     <div class="startwrap">
@@ -218,7 +243,7 @@
           <text x="118" y="74" font-family="'Noto Sans KR',sans-serif" font-size="56" font-weight="800" fill="#1f2a52" letter-spacing="2">영핏</text>
         </svg>
       </div>
-      <div class="count"><span id="cur">1</span> / <span id="total">60</span></div>
+      <div class="count"><span id="cur">1</span> / <span id="total">40</span></div>
     </div>
     <div class="bar"><i id="prog"></i></div>
     <div class="prompt">
@@ -251,7 +276,7 @@
     </div>
     <div class="scorecard">
       <div class="emoji" id="remoji">🎉</div>
-      <div class="score"><span id="rscore">0</span><small> / <span id="rtotal">60</span></small></div>
+      <div class="score"><span id="rscore">0</span><small> / <span id="rtotal">40</span></small></div>
       <div class="pct" id="rpct">0%</div>
     </div>
     <div class="reviewhead"><span id="rvtitle">오답 확인</span><span class="ok" id="rvok"></span></div>
@@ -266,68 +291,48 @@
 </div>
 
 <script>
-/* ===== 단어 데이터: 4. Dreaming of My Future (60) ===== */
+/* ===== 단어 데이터: 4. Open the Doors to the World · 천재(소영순) 중2 (40) ===== */
 const WORDS = [
-  {en:"look down", ko:"우울해 보이다"},
-  {en:"disappointed", ko:"실망한"},
-  {en:"competition", ko:"대회, 시합"},
-  {en:"record", ko:"기록"},
-  {en:"cook", ko:"요리사"},
-  {en:"laugh at", ko:"…을 비웃다"},
-  {en:"give up", ko:"포기하다"},
-  {en:"lose", ko:"지다, 패배하다"},
-  {en:"match", ko:"시합, 경기"},
-  {en:"presentation", ko:"발표"},
-  {en:"speech", ko:"연설, 말"},
-  {en:"a little", ko:"약간, 조금"},
-  {en:"tip", ko:"조언"},
-  {en:"dish", ko:"요리"},
-  {en:"against", ko:"…에 반대하여"},
-  {en:"grade", ko:"성적"},
-  {en:"Why don't you ...?", ko:"…하는 게 어때?"},
-  {en:"hidden", ko:"숨겨진, 비밀의"},
-  {en:"figure", ko:"(중요한) 인물, 숫자"},
-  {en:"career", ko:"직업, 직장 생활"},
-  {en:"space", ko:"우주"},
-  {en:"expert", ko:"전문가"},
-  {en:"get over", ko:"…을 극복하다"},
-  {en:"manager", ko:"관리자, 경영자"},
-  {en:"recognize", ko:"알아보다, 인정하다"},
-  {en:"ability", ko:"능력"},
-  {en:"colored", ko:"유색 인종의"},
-  {en:"courage", ko:"용기"},
-  {en:"break down", ko:"…을 부수다"},
-  {en:"rocket", ko:"로켓"},
-  {en:"allow", ko:"허락하다"},
-  {en:"judge", ko:"판사"},
-  {en:"permission", ko:"허락"},
-  {en:"have no choice but to", ko:"…할 수밖에 없다"},
-  {en:"impress", ko:"감명을 주다"},
-  {en:"stand up for", ko:"…을 옹호하다"},
-  {en:"engineer", ko:"기술자"},
-  {en:"install", ko:"설치하다"},
-  {en:"later", ko:"나중에, 후에"},
-  {en:"offer", ko:"제의, 제안"},
-  {en:"thanks to", ko:"… 덕분에"},
-  {en:"programmer", ko:"프로그래머"},
-  {en:"be afraid of", ko:"…을 두려워하다"},
-  {en:"face", ko:"(상황에) 직면하다"},
-  {en:"laughter", ko:"웃음(소리)"},
-  {en:"job festival", ko:"진로 박람회"},
-  {en:"magician", ko:"마술사"},
-  {en:"keep -ing", ko:"계속 …하다"},
-  {en:"help", ko:"도움이 되다"},
-  {en:"keep ... in mind", ko:"…을 명심하다"},
-  {en:"reporter", ko:"기자"},
-  {en:"baker", ko:"제빵사"},
-  {en:"control", ko:"조종하다"},
-  {en:"magic trick", ko:"마술 묘기"},
-  {en:"line", ko:"(연극, 영화의) 대사"},
-  {en:"decorate", ko:"장식하다"},
-  {en:"let", ko:"~하게 하다"},
-  {en:"enter", ko:"들어가다, 참가하다"},
-  {en:"audition", ko:"오디션"},
-  {en:"prepare", ko:"준비하다"}
+  {en:"mean", ko:"의미하다, 비열한"},
+  {en:"traditional", ko:"전통적인"},
+  {en:"system", ko:"체계"},
+  {en:"through", ko:"~를 통해"},
+  {en:"language", ko:"언어"},
+  {en:"movement", ko:"운동, 움직임"},
+  {en:"generation", ko:"세대"},
+  {en:"remember", ko:"기억하다"},
+  {en:"storyteller", ko:"이야기꾼"},
+  {en:"when", ko:"~할 때, 언제"},
+  {en:"hip", ko:"엉덩이"},
+  {en:"sock", ko:"양말"},
+  {en:"barefoot", ko:"맨발로"},
+  {en:"gesture", ko:"몸짓, 손짓"},
+  {en:"meaning", ko:"의미"},
+  {en:"wave", ko:"흔들다"},
+  {en:"while", ko:"~동안에, 반면에"},
+  {en:"circle", ko:"원, 동그라미, 원을 그리다"},
+  {en:"above", ko:"~위에"},
+  {en:"simple", ko:"간단한, 단순한"},
+  {en:"easily", ko:"쉽게"},
+  {en:"bend", ko:"구부리다"},
+  {en:"knee", ko:"무릎"},
+  {en:"step", ko:"내딛다, 디디다, 발걸음"},
+  {en:"move", ko:"움직이다"},
+  {en:"naturally", ko:"자연스럽게"},
+  {en:"way", ko:"방식, 방법"},
+  {en:"important", ko:"중요한"},
+  {en:"continue", ko:"계속하다"},
+  {en:"try", ko:"시도하다, 노력하다"},
+  {en:"history", ko:"역사"},
+  {en:"culture", ko:"문화"},
+  {en:"if", ko:"만약 ~라면, ~인지 아닌지"},
+  {en:"learn", ko:"배우다"},
+  {en:"class", ko:"수업, 계급"},
+  {en:"for a long time", ko:"오랫동안"},
+  {en:"pass down", ko:"~를 물려주다, 전하다"},
+  {en:"take off", ko:"벗다, 떼어내다"},
+  {en:"up and down", ko:"위아래로"},
+  {en:"from side to side", ko:"좌우로"}
 ];
 
 let queue=[], idx=0, score=0, wrongs=[], locked=false;
@@ -530,7 +535,7 @@ function finish(){
 
 function copyResult(){
   const total=queue.length, pct=Math.round(score/total*100);
-  let t='[EngFit 단어 테스트]\n4. Dreaming of My Future (천재 정사열·중3)\n\n';
+  let t='[EngFit 단어 테스트]\n4. Open the Doors to the World (천재 소영순·중2)\n\n';
   t+='점수: '+score+'/'+total+' ('+pct+'%)\n';
   t+='날짜: '+new Date().toLocaleDateString('ko-KR')+'\n';
   if(wrongs.length===0){
@@ -559,6 +564,6 @@ function showToast(msg){
 }
 function restart(){ show('start'); }
 </script>
-<!-- v2: keyboard 1-4 + typing(Enter, case-insensitive) -->
+<!-- 베이지 수채화 보태니컬 배경 · keyboard 1-4 + typing(Enter, case-insensitive) -->
 </body>
 </html>
